@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
   return (
     <div className='h-20 text-lg'>
-      <div className='flex justify-between py2.5 px-7 items-center'>
+      <div className='flex justify-between py-2.5 px-7 items-center'>
         <div className='flex items-center gap-6'>
           <div className='flex items-center'>
             <img
