@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import WestOutlinedIcon from '@mui/icons-material/WestOutlined';
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
-import WestOutlined from '@mui/icons-material/WestOutlined';
 
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
-    '/public/img/image1.jpeg',
-    '/public/img/image2.jpeg',
-    '/public/img/image3.jpeg',
+    '/img/image1.jpeg',
+    '/img/image2.jpeg',
+    '/img/image3.jpeg',
   ];
 
   const prevSlide = () => {
@@ -19,7 +18,7 @@ export default function Slider() {
   };
 
   return (
-    <div className='relative h-[calc(100vh-70px)] w-screen overflow-hidden'>
+    <div className='relative h-[calc(100vh-80px)] w-screen overflow-hidden'>
       <div
         className={`transition ease-in-out duration-700 w-[300vw] h-full flex translate-x-[${
           -currentSlide * 100
@@ -29,12 +28,12 @@ export default function Slider() {
         <img className='w-screen h-full object-cover' src={data[1]} alt='' />
         <img className='w-screen h-full object-cover' src={data[2]} alt='' />
       </div>
-      <div className='absolute w-min left-0 right-0 m-auto flex bottom-24 gap-3'>
+      <div className='absolute w-min left-0 right-0 mx-auto flex bottom-24 gap-3'>
         <div
           className='w-12 h-12 border flex items-center justify-center text-white cursor-pointer'
           onClick={prevSlide}
         >
-          <WestOutlined />
+          <WestOutlinedIcon />
         </div>
         <div
           className='w-12 h-12 border flex items-center justify-center text-white cursor-pointer'

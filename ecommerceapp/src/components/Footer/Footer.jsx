@@ -48,7 +48,7 @@ export default function Footer() {
           <img
             src='img/payment.png'
             className='h-16 w-auto'
-            alt='payment.png'
+            alt='ecommerceapp\public\img\payment.png'
           />
         </div>
       </div>
