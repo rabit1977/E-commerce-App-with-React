@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Card({ item }) {
   return (
     <Link className='link' to={`/product/${item.id}`}>
-      <div className='w-72 flex flex-col gap-2.5'>
+      <div className='w-72 flex flex-col gap-2.5 mb-8'>
         <div className={`group w-full h-96 overflow-hidden relative`}>
           {item.isNew && (
             <span className='absolute group-hover:z-40 z-20 top-1.5 left-1.5 bg-white px-2 py-1 text-sm rounded text-teal-500 font-medium tracking-wide hover:text-teal-600 hover:font-semibold'>
