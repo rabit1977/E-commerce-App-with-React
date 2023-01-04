@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
   return (
     <div className='text-base'>
       <div className='flex justify-between py-2.5 px-7 items-center'>
@@ -53,7 +55,7 @@ export default function Navbar() {
             <SearchIcon />
             <PersonOutlineOutlinedIcon />
             <FavoriteBorderOutlinedIcon />
-            <div className='relative'>
+            <div className='relative' onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon />
               <span className='text-xs w-4 h-4 rounded-full bg-[#2879fe] text-white absolute flex items-center justify-center -right-1 -top-1'>
                 0
@@ -62,6 +64,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      {open && <Cart/>}
     </div>
   );
 }
