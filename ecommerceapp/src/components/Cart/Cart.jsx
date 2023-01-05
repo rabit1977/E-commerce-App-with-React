@@ -24,7 +24,7 @@ export default function Cart() {
     },
   ];
   return (
-    <div className='cart absolute right-3 bg-white p-5 shadow-xl'>
+    <div className='cart absolute right-3f bg-white p-5 shadow-xl'>
       <h1 className='mb-4 text-slate-500 font-normal text-lg'>
         Product in your cart
       </h1>
